@@ -84,3 +84,19 @@ WhisperAudioApp/
 - No undo
 - Filters are brick-wall (bins are either kept or removed), so sharp filters can ring
 - The spectrum view has a linear frequency axis and no labels
+
+## License
+
+The code in this project is released under the [MIT License](LICENSE), except for the third-party code listed below.
+
+## Third-party software
+
+| Library | License | How it is used |
+| --- | --- | --- |
+| [ImGuiFileDialog](https://github.com/aiekick/ImGuiFileDialog) by Stephane Cuillerdier (aiekick) | MIT | Source files are included in this repository (`ImGuiFileDialog.*`). Its copyright and license notice is kept at the top of each file. |
+| [Dear ImGui](https://github.com/ocornut/imgui) | MIT | Not included, built from your own copy. |
+| [imgui-SFML](https://github.com/SFML/imgui-sfml) | MIT | Not included, built from your own copy. |
+| [SFML](https://www.sfml-dev.org/) | zlib/libpng | Not included, linked dynamically. |
+| [OpenAL Soft](https://openal-soft.org/) (`openal32.dll`, shipped with SFML) | LGPL 2.1 | Not included. If you distribute a build, ship it as a separate DLL together with its license text. |
+
+Each library keeps its own license and copyright. Follow those terms if you redistribute them.

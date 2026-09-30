@@ -9,12 +9,16 @@ A desktop WAV editor written in C++ (SFML + Dear ImGui) where the signal process
 ## Features
 
 - Load 8-bit or 16-bit PCM WAV files (mono, stereo or multichannel)
-- Waveform view with playhead, and a spectrum view
-- Play the selected part of the audio, crop it and export it as a new WAV
-- Time domain tools: reverse, peak normalize, gain
+- Three views: waveform (with playhead, zoom and scrolling), spectrogram and spectrum (log frequency axis, hover for frequency and dB)
+- Play the selected part of the audio (with looping), crop it and export it as a new WAV
+- Undo and redo (`Ctrl+Z`, `Ctrl+Y`) for the last 10 edits
+- A/B compare: switch between the original and the processed audio while listening (`A`)
+- Live spectrum analyzer and level meters, plus peak, RMS, crest factor and clipping stats
+- Time domain tools: reverse, peak normalize, fade in, fade out, gain
 - Frequency domain tools: low-pass, high-pass, band-pass and a 10-band EQ (31 Hz to 16 kHz)
 - Noise reduction: pick a quiet part of the file as a noise sample and it gets subtracted from the whole file
 - Spectral gate: removes frequency bins that are much quieter than the loudest one in each frame
+- Before/after spectrogram image export, and a window snapshot (`F12`)
 - Light and dark theme
 
 ## How it works
@@ -57,11 +61,13 @@ Then build and run. Copy the SFML DLLs (and `openal32.dll`) from SFML's `bin` fo
 
 ## Using it
 
-1. Click **Browse & Load WAV...** and pick a file.
-2. Apply effects from the sidebar. Every effect changes the whole file and cannot be undone yet, so load the file again to start over.
-3. Set **Start Time / End Time** to choose the part you want, press **Play** to listen to it, and **Save Cropped Selection** to export it.
+1. Click **Open...** (or press `Ctrl+O`) and pick a WAV file.
+2. Apply effects from the tabs in the sidebar (Edit, Filter, EQ, Noise). Press `Ctrl+Z` to undo an edit, and `A` to compare with the original.
+3. Drag on the waveform (or set **Start** and **End** in the Edit tab) to choose the part you want, press `Space` to listen to it, and use the **Export** tab to save it as a new WAV.
 
-For noise reduction, set **Noise Start / Noise End** around a part of the file that only has background noise (it must be longer than about 0.05 seconds). The two cyan lines on the waveform show the selection.
+For noise reduction, `Shift`+drag on the waveform over a part of the file that only has background noise (or set **Start** and **End** in the Noise tab), then apply it. The noise sample must be longer than about 0.05 seconds.
+
+Other shortcuts: `L` loop, mouse wheel zoom, `F12` window snapshot.
 
 ## Project layout
 
@@ -81,9 +87,8 @@ WhisperAudioApp/
 ## Known limitations
 
 - WAV only, 8-bit or 16-bit PCM (no 24-bit, float or compressed files)
-- No undo
+- Undo only goes back 10 steps, because each step stores a full copy of the audio
 - Filters are brick-wall (bins are either kept or removed), so sharp filters can ring
-- The spectrum view has a linear frequency axis and no labels
 
 ## License
 

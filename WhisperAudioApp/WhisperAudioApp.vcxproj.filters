@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AudioEngine">
+      <UniqueIdentifier>{961a6711-b1b2-4e03-a065-6c0e5c5da9f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AudioEngine\Math">
+      <UniqueIdentifier>{bba8f213-d19d-489b-a290-cb2a6d98ad22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AudioEngine\DSP">
+      <UniqueIdentifier>{ddb7c991-f0f6-4641-8414-08403b8c06ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AudioEngine\Audio">
+      <UniqueIdentifier>{562c6522-0b81-4b1c-9c77-b43862c1156a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\imgui-sfml-2.6.1\imgui-sfml-2.6.1\imgui-SFML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\imgui-1.89.9\imgui-1.89.9\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\imgui-1.89.9\imgui-1.89.9\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\imgui-1.89.9\imgui-1.89.9\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\imgui-1.89.9\imgui-1.89.9\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\Math\Complex.cpp">
+      <Filter>AudioEngine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\Math\Filter.cpp">
+      <Filter>AudioEngine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\DSP\FFT.cpp">
+      <Filter>AudioEngine\DSP</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\Audio\Whisper.cpp">
+      <Filter>AudioEngine\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Spectogram.cpp">
+      <Filter>AudioEngine\DSP</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGuiFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioEngine.h" />
+    <ClInclude Include="AudioEngine\Math\Complex.h">
+      <Filter>AudioEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Math\Filter.h">
+      <Filter>AudioEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Math\WavHeader.h">
+      <Filter>AudioEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\DSP\FFT.h">
+      <Filter>AudioEngine\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Audio\Whisper.h">
+      <Filter>AudioEngine\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Spectrogram.h">
+      <Filter>AudioEngine\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiFileDialog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiFileDialogConfig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

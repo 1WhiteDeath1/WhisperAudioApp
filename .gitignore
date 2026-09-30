@@ -1,0 +1,30 @@
+# visual studio / build output
+.vs/
+x64/
+x86/
+Debug/
+Release/
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.tlog
+*.log
+*.recipe
+*.exe
+*.user
+*.suo
+
+# files the app makes while running
+imgui.ini
+temp_preview.wav
+output.wav
+
+# local safety copy from before the cleanup, delete it once you are happy
+_backup_original/
+
+# app screenshots (F12) and editor backups
+whisper_*.png
+*.bak

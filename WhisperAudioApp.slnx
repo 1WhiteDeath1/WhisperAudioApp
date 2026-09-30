@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/" />
+  <Project Path="WhisperAudioApp/WhisperAudioApp.vcxproj" Id="723c6eb9-fa7b-41e5-9696-fed90abfb3be" />
+</Solution>
